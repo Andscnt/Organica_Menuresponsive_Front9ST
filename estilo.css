@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.ancho{
+    max-width: 1200px;
+    margin: auto;
+    /*border: #6cb500 1px solid;*/
+}
+:root{
+    --Gris :    #f3f3f3;
+    --Verde:    #6cb500;
+    --GrisMenu: #f3f3f3;
+    --tipoletra: 'Arimo', sans-serif;
+}
+body{
+    font-family: var(--tipoletra);
+    font-size: 16px;
+    line-height: 24px;
+    color: black;
+}
+.conheader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap ;
+    padding: 15px;
+}
+.contarriba{
+    max-width: 800px;
+   /* border: black 1px solid;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    max-width: 500px;
+   /* border: black 1px solid;*/
+}
+.logo img{
+    width: 60%;
+}
+.contmenu{
+    /*  border: #28557a 1px solid;*/
+      padding: 10px;
+      display: none;
+  }
+  .iconbarra{
+      text-decoration: none;
+      background-color: transparent;
+      color: var(--Verde);
+      padding: 10px;
+      border-radius: 5px;
+      display: inline-block;
+      font-size: 32px;
+   }
+nav{
+    margin: 10px;
+    max-width: 750px;
+    /*border: red 1px solid;*/
+}
+ nav ul{
+     list-style: none;
+     margin: 10px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+     align-items: stretch;
+     flex-wrap: nowrap;
+     gap: 20px;
+ }
+ nav ul li a{
+     color: black;
+     text-decoration: none;
+     font-weight: bold;
+     border-bottom: transparent 1px solid;
+     background-color: transparent;
+     padding: 10px 15px;
+     display: inline-block;
+     transition: all 0.5s;
+ }
+ nav ul li a:hover{
+    border-bottom: var(--Verde) 1px solid;
+    color: var(--Verde);
+}
+/*img fondo*/
+.fotofondo{
+    height: 420px;
+    background-image: url(imagenes/foto_slide.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+.tituloslide{
+    color: white;
+    font-size: 30px;
+    max-width: 900px;
+    line-height: 40px;
+    text-align: left;
+    padding: 0px 120px;
+}
+.cajaserv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 65px;
+    padding-top: 30px;
+}
+.servicios{
+    padding: 15px;
+}
+.servicios h1{
+    text-align: center;
+}
+.servicios h3{
+    color: var(--Verde);
+    text-align: center;
+}
+.servicios article{
+    max-width: 350px;
+    border-radius: 10px;
+    /*border: #6cb500 1px solid;*/
+    background-color: var(--Gris);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px 0px;
+}
+.servicios figure{
+    max-width: 100px;
+    /*border: #6cb500 1px solid;*/
+}
+.servicios img{
+    width: 100%;
+}
+.servicios article p{
+    padding: 10px 30px;
+    text-align: center;
+}
+
+footer{
+    background-color: var(--Verde);
+}
+footer figure{
+    margin: auto;
+    width: 400px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer img{
+    width: 80%;
+}
+
+/*mediaqueri_i*/
+@media screen and (max-width: 760px){
+    .conheader{
+        flex-direction: column;
+    }
+    .logo{
+        padding-left: 30px;
+    }
+    .contmenu{
+        display: block;
+        padding: 20px -20px 20px 20px;
+    }
+    nav{
+        width: 90%;
+        display: none;
+        background-color: var(--GrisMenu);
+    }
+    nav ul{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    nav li{
+        width: 100%;
+    }
+    nav ul li a{
+        border: none;
+        border-bottom: #333 2px dotted;
+        display: block;
+    }
+    .cajaserv{
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: center;
+        gap: 35px;
+    }
+    .servicios article{
+        max-width: 100%;
+        padding: 15px 50px;
+    }
+    .tituloslide{
+        color: white;
+        font-size: 25px;
+        max-width: 900px;
+        line-height: 40px;
+        text-align: left;
+        padding: 0px 20px;
+    }
+    footer figure{
+        width: 300px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
